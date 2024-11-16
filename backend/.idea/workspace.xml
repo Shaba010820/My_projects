@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b2b9e0d8-91c1-48f5-8dfc-ba03abbb3c3b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/images_pUqVjlb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/images_ujFaN6D.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0002_rename_basketitem_basketcount.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0003_order_orderitem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0004_rename_quantity_basketcount_count_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0005_rename_full_description_product_fulldescription.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0006_remove_product_reviews_remove_product_specifications_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0007_alter_product_reviews_alter_product_specifications.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0008_rename_basketcount_basketitem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0009_subcategory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0010_delete_subcategory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0011_basketproduct_delete_basketitem_basket_products.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0012_remove_basket_products.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0013_rename_basketproduct_basketcount_alter_basket_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0014_alter_basketcount_basket_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0015_rename_basketcount_basketproduct.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0016_alter_basketproduct_product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0017_alter_basketproduct_basket.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0018_alter_basketproduct_basket.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0019_alter_basketproduct_basket.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0020_alter_basketproduct_unique_together_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0021_alter_basketproduct_product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0022_alter_basketproduct_product_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlineshop/migrations/0023_basket_products_alter_basketproduct_basket_and_more.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diploma-frontend/frontend/templates/frontend/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/../diploma-frontend/frontend/templates/frontend/product.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2ipNeIu82qxyADZLjUDStad5wrH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/user/PycharmProjects/python_django_diploma/python_django_diploma/backend"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b2b9e0d8-91c1-48f5-8dfc-ba03abbb3c3b" name="Changes" comment="" />
+      <created>1720183652366</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720183652366</updated>
+    </task>
+    <servers />
+  </component>
+</project>
