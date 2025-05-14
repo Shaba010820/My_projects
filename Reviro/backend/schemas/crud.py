@@ -34,3 +34,8 @@ class TaskRead(BaseModel):
     description: str
     due_date: datetime
     status: TaskStatus
+
+
+class UserCreate(BaseModel):
+    username: str
+    password: str

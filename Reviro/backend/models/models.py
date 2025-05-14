@@ -10,6 +10,14 @@ class BaseModel(DeclarativeBase):
     ...
 
 
+class User(BaseModel):
+    __tablename__ = "users"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    username: Mapped[str] = mapped_column(String(32), unique=True)
+    password: Mapped[str] = mapped_column(String(128))
+
+
 class TaskStatus(str, Enum):
     new = 'new'
     in_progress = 'in_progress'
