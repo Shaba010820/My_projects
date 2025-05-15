@@ -9,14 +9,16 @@
 
 **POST `/login`**  
 Авторизация с помощью `username` и `password`. Возвращает JWT токен.
-    Пример запроса:
+    
+Пример запроса:
         curl -X POST http://localhost:8000/login -d "username=admin&password=password"
         должны получить access_token и token_type в json формате
 
 **POST `/register`**
 
 Регистрация нового пользователя с `username` и `password`
-    Пример запроса:
+    
+Пример запроса:
         curl -X POST http://localhost:8000/register \
         -H "Content-Type: application/json" \
         -d '{"username": "newuser", "password": "newpassword"}'
@@ -29,7 +31,8 @@
 **POST /tasks/**
 
 Создаёт новую задачу
-    Пример запроса:
+    
+Пример запроса:
     curl -X POST http://localhost:8000/tasks/ \
     -H "Authorization: Bearer <TOKEN>" \
     -H "Content-Type: application/json" \
@@ -43,11 +46,13 @@
 **GET /tasks/**
 
 Возвращает список задач. Поддерживает фильтрацию
-    Фильтрации по параметрам:
+    
+Фильтрации по параметрам:
     1. status - new, done, in_progress
     2. due_date_lt - До указанной даты (less than)
     3. due_date_gt - После указанной даты(greater than)
-    Пример запроса:
+    
+Пример запроса:
     curl -X GET "http://localhost:8000/tasks/?status=new&due_date__lt=2025-05-21" \
     -H "Authorization: Bearer <TOKEN>"
   
@@ -55,13 +60,15 @@
 **GET /tasks/{id}**
 
 Получить задачу по ID
-    Пример запроса:
+    
+Пример запроса:
     curl -X GET http://localhost:8000/tasks/1 -H "Authorization: Bearer <TOKEN>"
 
 **PUT /tasks/{id}**
 
 Полное обновление задачи
-    Пример запроса:
+    
+Пример запроса:
     curl -X PUT http://localhost:8000/tasks/1 \
     -H "Authorization: Bearer <TOKEN>" \
     -H "Content-Type: application/json" \
@@ -75,7 +82,8 @@
 **PATCH /tasks/{id}**
 
 Частичное обновление задач(меняется только одно поле, например, только статус)
-    Пример запроса:
+    
+Пример запроса:
     curl -X PATCH http://localhost:8000/tasks/1 \
     -H "Authorization: Bearer <TOKEN>" \
     -H "Content-Type: application/json" \
@@ -84,7 +92,8 @@
 **DELETE /tasks/{id}**
 
 Удаление задачи
-    Пример запроса:
+
+Пример запроса:
     curl -X DELETE http://localhost:8000/tasks/1 \
     -H "Authorization: Bearer <TOKEN>"
 
@@ -93,6 +102,7 @@
 
 1. Клонируйте репозиторий:
     git clone https://github.com/Shaba010820/My_projects/tree/main/Reviro
+    
     cd Reviro
 2. Создайте виртуальное окружение и активируйте его:
     python -m venv venv
