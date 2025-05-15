@@ -27,6 +27,7 @@
 Все эндпоинты ниже требуют авторизацию(Authorization: Bearer <TOKEN> в заголовке)
     
 **POST /tasks/**
+
 Создаёт новую задачу
     Пример запроса:
     curl -X POST http://localhost:8000/tasks/ \
@@ -40,6 +41,7 @@
     }' 
 
 **GET /tasks/**
+
 Возвращает список задач. Поддерживает фильтрацию
     Фильтрации по параметрам:
     1. status - new, done, in_progress
@@ -51,11 +53,13 @@
   
     
 **GET /tasks/{id}**
+
 Получить задачу по ID
     Пример запроса:
     curl -X GET http://localhost:8000/tasks/1 -H "Authorization: Bearer <TOKEN>"
 
 **PUT /tasks/{id}**
+
 Полное обновление задачи
     Пример запроса:
     curl -X PUT http://localhost:8000/tasks/1 \
@@ -69,6 +73,7 @@
     }
 
 **PATCH /tasks/{id}**
+
 Частичное обновление задач(меняется только одно поле, например, только статус)
     Пример запроса:
     curl -X PATCH http://localhost:8000/tasks/1 \
@@ -77,6 +82,7 @@
     -d '{ "status": "done" }'
 
 **DELETE /tasks/{id}**
+
 Удаление задачи
     Пример запроса:
     curl -X DELETE http://localhost:8000/tasks/1 \
