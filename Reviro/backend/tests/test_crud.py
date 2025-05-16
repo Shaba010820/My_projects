@@ -21,7 +21,7 @@ def clear_db():
     BaseModel.metadata.drop_all(bind=engine)
 
 
-def create_sample_task():
+def create_sample_tasks():
     token = get_access_token()
     headers = {"Authorization": f"Bearer {token}"}
     data = {
@@ -35,7 +35,7 @@ def create_sample_task():
     return response.json()
 
 # Тесты
-def test_create_task():
+def test_create_tasks():
     token = get_access_token()
     headers = {"Authorization": f"Bearer {token}"}
     data = {
@@ -48,22 +48,22 @@ def test_create_task():
     assert response.status_code == 201
     assert response.json()["title"] == "Sample Task"
 
-def test_get_task():
-    task = create_sample_task()
+def test_get_tasks():
+    task = create_sample_tasks()
     token = get_access_token()
     headers = {"Authorization": f"Bearer {token}"}
     response = client.get(f"/tasks/{task['id']}", headers=headers)
     assert response.status_code == 200
     assert response.json()["id"] == task["id"]
 
-def test_get_task_not_found():
+def test_get_tasks_not_found():
     token = get_access_token()
     headers = {"Authorization": f"Bearer {token}"}
     response = client.get("/tasks/999", headers=headers)
     assert response.status_code == 404
 
-def test_update_task():
-    task = create_sample_task()
+def test_update_tasks():
+    task = create_sample_tasks()
     token = get_access_token()
     headers = {"Authorization": f"Bearer {token}"}
     updated = {
@@ -76,8 +76,8 @@ def test_update_task():
     assert response.status_code == 200
     assert response.json()["title"] == "Updated"
 
-def test_patch_task():
-    task = create_sample_task()
+def test_patch_tasks():
+    task = create_sample_tasks()
     token = get_access_token()
     headers = {"Authorization": f"Bearer {token}"}
     partial = {"status": "done"}
@@ -85,8 +85,8 @@ def test_patch_task():
     assert response.status_code == 200
     assert response.json()["status"] == "done"
 
-def test_delete_task():
-    task = create_sample_task()
+def test_delete_tasks():
+    task = create_sample_tasks()
     token = get_access_token()
     headers = {"Authorization": f"Bearer {token}"}
     response = client.delete(f"/tasks/{task['id']}", headers=headers)

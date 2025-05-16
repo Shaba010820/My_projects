@@ -30,7 +30,7 @@ def create_tasks(tasks: TaskCreate, db: Session = Depends(get_db),
 
 
 @router.get('/{task_id}', response_model=TaskRead)
-def get_task(task_id: int, db: Session = Depends(get_db),
+def get_tasks(task_id: int, db: Session = Depends(get_db),
              token_data: dict = Depends(verify_token)):
     task = db.query(Task).filter(Task.id == task_id).first()
     if not task:
@@ -39,7 +39,7 @@ def get_task(task_id: int, db: Session = Depends(get_db),
     return task
 
 @router.put('/{task_id}', response_model=TaskRead)
-def update_task(task_id: int, updated: TaskCreate, db: Session = Depends(get_db),
+def update_tasks(task_id: int, updated: TaskCreate, db: Session = Depends(get_db),
                 token_data: dict = Depends(verify_token)):
     task = db.query(Task).filter(Task.id == task_id).first()
     if not task:
@@ -57,7 +57,7 @@ def update_task(task_id: int, updated: TaskCreate, db: Session = Depends(get_db)
 
 
 @router.patch('/{task_id}', response_model=TaskRead)
-def patch_task(task_id: int, updated: TaskUpdate, db: Session = Depends(get_db),
+def patch_tasks(task_id: int, updated: TaskUpdate, db: Session = Depends(get_db),
                token_data: dict = Depends(verify_token)):
     task = db.query(Task).filter(Task.id == task_id).first()
 
@@ -79,7 +79,7 @@ def patch_task(task_id: int, updated: TaskUpdate, db: Session = Depends(get_db),
     return task
 
 @router.delete('/{task_id}', status_code=204)
-def delete_task(task_id: int, db:Session = Depends(get_db),
+def delete_tasks(task_id: int, db:Session = Depends(get_db),
                 token_data: dict = Depends(verify_token)):
     task = db.query(Task).filter(Task.id == task_id).first()
 
