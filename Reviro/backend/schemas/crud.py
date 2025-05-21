@@ -13,6 +13,7 @@ class TaskFilter(Filter):
     class Constants(Filter.Constants):
         model = Task
 
+
 class TaskCreate(BaseModel):
     title: str
     description: str
