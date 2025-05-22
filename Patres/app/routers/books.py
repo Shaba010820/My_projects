@@ -31,7 +31,7 @@ def create_books(
 
 
 @router.get("/", response_model=list[BookRead])
-def list_books(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+def list_books(db: Session = Depends(get_db)):
     books = db.query(Book).all()
 
     return books

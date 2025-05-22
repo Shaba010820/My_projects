@@ -66,7 +66,9 @@ def test_return_book_success(
     db.refresh(borrow)
 
     response = client.post(
-        "/borrow/return", json={"borrow_id": borrow.id}, headers=register_and_login
+        "/borrow/return",
+        json={"borrow_id": borrow.id, "reader_id": reader.id},
+        headers=register_and_login,
     )
 
     assert response.status_code == 200
@@ -75,10 +77,12 @@ def test_return_book_success(
 
 def test_return_book_invalid_id(client: TestClient, register_and_login):
     response = client.post(
-        "/borrow/return", json={"borrow_id": 9999}, headers=register_and_login
+        "/borrow/return",
+        json={"borrow_id": 9999, "reader_id": 9999},
+        headers=register_and_login,
     )
 
-    assert response.status_code == 400
+    assert response.status_code == 404
 
 
 def test_get_active_borrows(
@@ -95,3 +99,24 @@ def test_get_active_borrows(
     data = response.json()
     assert isinstance(data, list)
     assert any(b["id"] == borrow.id for b in data)
+
+
+def test_return_book_wrong_reader(
+    client: TestClient, register_and_login, db, test_book_and_reader, create_reader
+) -> None:
+    book, reader1 = test_book_and_reader
+    reader2 = create_reader
+
+    borrow = BorrowedBook(book_id=book.id, reader_id=reader1.id)
+    db.add(borrow)
+    db.commit()
+    db.refresh(borrow)
+
+    response = client.post(
+        "/borrow/return",
+        json={"borrow_id": borrow.id, "reader_id": reader2.id},
+        headers=register_and_login,
+    )
+
+    assert response.status_code == 403
+    assert response.json()["detail"] == "This book was not borrowed by the given reader"

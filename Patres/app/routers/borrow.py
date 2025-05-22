@@ -56,13 +56,21 @@ def return_book(
 ):
     borrow = db.query(BorrowedBook).filter(BorrowedBook.id == request.borrow_id).first()
 
-    if not borrow or borrow.return_date is not None:
-        raise HTTPException(status_code=400, detail="Invalid borrow record")
+    if not borrow:
+        raise HTTPException(status_code=404, detail="Borrow record not found")
+
+    if borrow.return_date is not None:
+        raise HTTPException(status_code=400, detail="Book already returned")
+
+    if borrow.reader_id != request.reader_id:
+        raise HTTPException(
+            status_code=403, detail="This book was not borrowed by the given reader"
+        )
 
     book = db.query(Book).filter(Book.id == borrow.book_id).first()
 
     if not book:
-        raise HTTPException(status_code=404, detail="Book is not found")
+        raise HTTPException(status_code=404, detail="Book not found")
 
     borrow.return_date = datetime.now()
     book.copies += 1

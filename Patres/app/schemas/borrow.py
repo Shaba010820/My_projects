@@ -11,6 +11,7 @@ class BorrowBookRequest(BaseModel):
 
 class ReturnBookRequest(BaseModel):
     borrow_id: int
+    reader_id: int
 
 
 class BorrowedBookRead(BaseModel):

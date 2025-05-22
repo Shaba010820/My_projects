@@ -69,3 +69,14 @@ def test_book_and_reader(db: Session):
     db.refresh(book)
     db.refresh(reader)
     return book, reader
+
+
+@pytest.fixture
+def create_reader(db: Session):
+    email = f"reader_{uuid.uuid4()}@example.com"
+    reader = Reader(name="Shaba", email=email)
+    db.add(reader)
+    db.commit()
+    db.refresh(reader)
+
+    return reader
